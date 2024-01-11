@@ -5,38 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/10 13:51:04 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/10 19:21:20 by rjobert          ###   ########.fr        #
+#    Created: 2024/01/10 20:32:15 by rjobert           #+#    #+#              #
+#    Updated: 2024/01/10 20:36:41 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
-INC = -MMD -I ./
-
-NAME = brainz
-HEADER = Zombie.h
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+NAME = HiBrain
+SRC = main.cpp
 OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
+RM = rm -rf
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
--include $(DEPS)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Makefile $(HEADER)
-	$(CC) $(FLAGS) $(INC) -c $< -o $@
+%.o: %.cpp Makefile
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS) $(DEPS)
+	$(RM) $(OBJS) $(DEPS)
 
 fclean: clean
-	rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.phony: clean fclean re all
-
+.phony: re clean fclean all

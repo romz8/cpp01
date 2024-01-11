@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 12:55:26 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 15:37:57 by rjobert          ###   ########.fr       */
+/*   Created: 2024/01/11 15:00:17 by rjobert           #+#    #+#             */
+/*   Updated: 2024/01/11 18:37:40 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WEAPON_H
+# define WEAPON_H
 
-# include "Zombie.h"
-
-class	Zombie
-{
-private:
-	std::string	name;
-
-public:
-	Zombie(std::string zname);
-	~Zombie(void);
-	void	announce(void);	
-};
+# include <string>
+# include "Weapon.hpp"
 
 #endif

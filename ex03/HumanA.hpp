@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 12:55:26 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 15:37:57 by rjobert          ###   ########.fr       */
+/*   Created: 2024/01/11 15:12:37 by rjobert           #+#    #+#             */
+/*   Updated: 2024/01/11 18:14:48 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-# include "Zombie.h"
+# include "HumanA.h"
 
-class	Zombie
+class	HumanA
 {
 private:
-	std::string	name;
+	Weapon&		_weapon;
+	std::string	_name;
 
 public:
-	Zombie(std::string zname);
-	~Zombie(void);
-	void	announce(void);	
+	HumanA(const std::string& name, Weapon& weapon);
+	void	attack();
 };
 
 #endif

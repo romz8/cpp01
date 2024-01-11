@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   sedloser.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 12:55:26 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 15:37:57 by rjobert          ###   ########.fr       */
+/*   Created: 2024/01/11 19:32:03 by rjobert           #+#    #+#             */
+/*   Updated: 2024/01/11 21:07:34 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef SEDLOSER_H
+# define SEDLOSER_H
 
-# include "Zombie.h"
-
-class	Zombie
-{
-private:
-	std::string	name;
-
-public:
-	Zombie(std::string zname);
-	~Zombie(void);
-	void	announce(void);	
-};
+# include <iostream>
+# include <string>
+# include <cctype>
+# include <fstream>
 
 #endif
