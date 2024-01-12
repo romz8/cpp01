@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: romainjobert <romainjobert@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 19:30:59 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/11 22:39:20 by rjobert          ###   ########.fr       */
+/*   Updated: 2024/01/12 11:47:47 by romainjober      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,16 @@
 void	srch_n_replace(std::string& buffer, std::string const target, const std::string& rep)
 {
 	size_t	pos;
-	
-	if(buffer.empty() || target.empty())
-		return;
-	pos = 0;
-	while (42)
+
+	pos = buffer.find(target);
+	while (pos != std::string::npos)
 	{
-		pos = buffer.find(target, pos);
-		if (pos < 0 || pos == std::string::npos)
-			break;
 		buffer.erase(pos, target.length());
 		if (!rep.empty())
 			buffer.insert(pos, rep);
-		pos += rep.length();
-		if (pos >= buffer.length())
-            break;
+		pos = buffer.find(target, pos + rep.length());
 	}
+	return ;
 }
 
 int	copy_n_replace(std::ifstream& inf, std::ofstream& outf, const std::string& target, const std::string& rep)
@@ -40,7 +34,10 @@ int	copy_n_replace(std::ifstream& inf, std::ofstream& outf, const std::string& t
 	while(std::getline(inf, buffer))
 	{
 		if (inf.fail())
+		{	
+			std::cout << "Error while reading infile" << std::endl;
 			return (-1);
+		}
 		srch_n_replace(buffer, target, rep);
 		outf << buffer;
 		if (!inf.eof())
@@ -62,7 +59,8 @@ int main(int argc, char *argv[])
 		std::cerr << "incorrect file, impossile to open" << std::endl;
 		std::exit(1);
 	}
-	std::string outfile_name = argv[1] + std::string(".replace");
+	std::string outfile_name = argv[1];
+	outfile_name.append(".replace");
 	std::ofstream outfile(outfile_name, std::ios::out | std::ios::trunc);
 	if ((!outfile.is_open()))
 	{
