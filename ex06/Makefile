@@ -6,12 +6,12 @@
 #    By: romainjobert <romainjobert@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 18:29:56 by romainjober       #+#    #+#              #
-#    Updated: 2024/01/13 15:47:21 by romainjober      ###   ########.fr        #
+#    Updated: 2024/01/13 16:15:36 by romainjober      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-NAME = Harl
+NAME = harlFilter
 HEADER = Harl.h Harl.hpp
 SRC = main.cpp Harl.cpp
 OBJS = $(SRC:.cpp=.o)
