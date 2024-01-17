@@ -6,7 +6,7 @@
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 20:12:37 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/11 20:22:33 by rjobert          ###   ########.fr        #
+#    Updated: 2024/01/17 17:19:55 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = sedloser
 SRC = main.cpp
 HEADER = sedloser.h
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -I ./
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD -I ./
 OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 
@@ -35,4 +35,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: all re clean fclean
+.PHONY: all re clean fclean

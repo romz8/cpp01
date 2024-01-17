@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainjobert <romainjobert@student.42.f    +#+  +:+       +#+        */
+/*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:01:30 by romainjober       #+#    #+#             */
-/*   Updated: 2024/01/13 16:30:50 by romainjober      ###   ########.fr       */
+/*   Updated: 2024/01/17 21:07:43 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,6 @@ int input_filter(std::string level)
             return i;
     }
     return (-1);
-    // if (level == "DEBUG")
-    //     return DEBUG_Lvl;
-    // else if (level == "INFO")
-    //     return INFO_Lvl;
-    // else if (level == "WARNING")
-    //     return WARNING_Lvl;
-    // else if (level == "ERROR")
-    //     return ERROR_Lvl;
-    // else
-    //     return INVALID_Lvl;
 }
 
 void    Harl::complain(std::string level)
@@ -78,14 +68,11 @@ void    Harl::complain(std::string level)
     switch (index)
     {
         case 0:
-            this->debug();
-            index++;
+            this->debug(); 
         case 1:
             this->info();
-            index++;
         case 2:
             this->warning();
-            index++;
         case 3:
             this->error();
             break;

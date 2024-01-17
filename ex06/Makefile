@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romainjobert <romainjobert@student.42.f    +#+  +:+       +#+         #
+#    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 18:29:56 by romainjober       #+#    #+#              #
-#    Updated: 2024/01/13 16:15:36 by romainjober      ###   ########.fr        #
+#    Updated: 2024/01/17 17:20:16 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEADER = Harl.h Harl.hpp
 SRC = main.cpp Harl.cpp
 OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
-FLAGS = -Wall -Wextra -Werror -MMD -I ./
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD -I ./
 RM = rm -rf
 
 all: $(NAME)
@@ -35,4 +35,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: all re clean flcean
+.PHONY: all re clean flcean

@@ -6,7 +6,7 @@
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 18:06:27 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/11 20:20:53 by rjobert          ###   ########.fr        #
+#    Updated: 2024/01/17 18:13:02 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -rf
 OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 HEADER = HumanA.h HumanB.h Weapon.h
-FLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -I ./
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD -I ./
 
 all: $(NAME)
 
@@ -36,4 +36,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: re all clean fclean
+.PHONY: re all clean fclean

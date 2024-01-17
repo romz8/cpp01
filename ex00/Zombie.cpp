@@ -6,12 +6,13 @@
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:00:41 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 15:38:27 by rjobert          ###   ########.fr       */
+/*   Updated: 2024/01/17 19:38:23 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.h"
 
+Zombie::Zombie(void){}
 Zombie::Zombie(std::string zname) : name(zname) {}
 
 Zombie::~Zombie(void)

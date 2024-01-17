@@ -6,7 +6,7 @@
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 20:32:15 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/10 20:36:41 by rjobert          ###   ########.fr        #
+#    Updated: 2024/01/15 18:08:02 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,11 @@ SRC = main.cpp
 OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD
 
 all: $(NAME)
 
+-include $(DEPS)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
@@ -35,4 +36,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: re clean fclean all
+.PHONY: re clean fclean all

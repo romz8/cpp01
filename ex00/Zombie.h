@@ -6,7 +6,7 @@
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 12:58:20 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 13:43:35 by rjobert          ###   ########.fr       */
+/*   Updated: 2024/01/15 18:03:34 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,4 @@ Zombie*	newZombie(std::string name);
 void	randomChump( std::string name );
 
 #endif
+

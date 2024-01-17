@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romainjobert <romainjobert@student.42.f    +#+  +:+       +#+        */
+/*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 19:30:59 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/12 11:47:47 by romainjober      ###   ########.fr       */
+/*   Updated: 2024/01/17 17:29:05 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	srch_n_replace(std::string& buffer, std::string const target, const std::st
 {
 	size_t	pos;
 
+	if (target.empty())
+		return;
 	pos = buffer.find(target);
 	while (pos != std::string::npos)
 	{

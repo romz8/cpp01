@@ -6,7 +6,7 @@
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 16:04:52 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/10 19:21:09 by rjobert          ###   ########.fr        #
+#    Updated: 2024/01/17 16:54:39 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 HEADER = Zombie.h
 INC = -MMD -I ./
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 all: $(NAME)
 
@@ -33,5 +33,6 @@ clean:
 fclean: clean
 	rm $(NAME)
 
-re: fclean alls
-.phony: all clean fclean re 
+re: fclean all
+
+.PHONY: all clean fclean re 

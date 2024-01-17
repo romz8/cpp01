@@ -6,7 +6,7 @@
 /*   By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:55:07 by rjobert           #+#    #+#             */
-/*   Updated: 2024/01/10 16:27:08 by rjobert          ###   ########.fr       */
+/*   Updated: 2024/01/17 16:57:51 by rjobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,9 @@ int	main(void)
 	zombie_factory(3, "zomb_trio");
 	std::cout << "let' do 42 of them to test robustness (and fun) " << std::endl;
 	zombie_factory(42, "zomb_42");
+	std::cout << "0 to test robustness (no fun) " << std::endl;
+	zombie_factory(0, "zomb_zero");
+	std::cout << "negative to test robustness (no fun) " << std::endl;
+	zombie_factory(-1, "zomb_neg");
 	return (0);
 }

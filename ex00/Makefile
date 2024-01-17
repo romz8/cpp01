@@ -6,13 +6,13 @@
 #    By: rjobert <rjobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 13:51:04 by rjobert           #+#    #+#              #
-#    Updated: 2024/01/10 19:21:20 by rjobert          ###   ########.fr        #
+#    Updated: 2024/01/15 18:08:22 by rjobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 INC = -MMD -I ./
 
 NAME = brainz
@@ -38,5 +38,5 @@ fclean: clean
 
 re: fclean all
 
-.phony: clean fclean re all
+.PHONY: clean fclean re all
 
